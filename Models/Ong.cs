@@ -18,7 +18,7 @@ namespace conexaoemacao.Models
         public string? Descricao{ get; set; }
 
         // puxando a class endereço
-        public Endereco? Endereco { get; set; }
+        public Endereco Endereco { get; set; } = new();
 
         // criando campo telefone
         [Required]
