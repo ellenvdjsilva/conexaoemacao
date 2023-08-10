@@ -4,15 +4,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace conexaoemacao.Models
 {
     [Table("Candidaturas")]
-    public class Candidatura
-    {
-        public int VagaId { get; set; }
-        public int CandidatoId { get; set; }
-        public string Mensagem { get; set; } = string.Empty;
-        [StringLength(100)]
-        public string Status { get; set; } = string.Empty;
+    public record Candidatura
+    {   
+        public int Id { get; set; }
+        [Required]
         [StringLength(50)]
+        public string Mensagem { get; set; } = string.Empty;
+        
+        public string Status { get; set; } = string.Empty;
 
+        public Voluntario Candidato { get; set; } = new();
+        public Vaga Vaga { get; set; } = new();
 
     }
 }

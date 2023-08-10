@@ -13,7 +13,7 @@ namespace conexaoemacao.Models
 
         // criando campo idade 
         [Required]
-        [Min(16)] // arrumar ainda 
+        [MinLength(16)] // arrumar ainda 
         public int Age { get; set; }
 
         // criando um campo CPF
@@ -22,7 +22,7 @@ namespace conexaoemacao.Models
         public int CPF { get; set; }
 
         // puxando a class endereço
-        public Endereco? Endereco { get; set; }
+        public Endereco Endereco { get; set; } = new();
 
         // criando campo telefone
         [Required]
