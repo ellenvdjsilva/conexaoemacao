@@ -15,7 +15,7 @@ namespace conexaoemacao.Models
 
         // criando um campo descrição
         [Required]
-        public string? Description { get; set; }
+        public string? Descricao{ get; set; }
 
         // puxando a class endereço
         public Endereco? Endereco { get; set; }
@@ -23,7 +23,7 @@ namespace conexaoemacao.Models
         // criando campo telefone
         [Required]
         [StringLength(13)]
-        public int Phone{ get; set;}
+        public int Telefone { get; set;}
 
         // criando campo e-mail
         [Required]

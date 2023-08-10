@@ -8,24 +8,24 @@ namespace conexaoemacao.Models
         public int Id { get; set; }
 
         // criando um campo nome/rua
-        public string? Road { get; set; }
+        public string? Nome_rua { get; set; }
 
         // criando um campo numero
-        public int Nombre { get; set; }
+        public int Numero { get; set; }
         // criando um campo complemento/endereço
-        public string? AddressLine { get; set; }
+        public string? Complemento { get; set; }
 
         // criando um campo bairro
-        public string? Neighborhood { get; set; }
+        public string? Bairro { get; set; }
 
         // criando um campo cidade
-        public string? City { get; set; }
+        public string? Cidade { get; set; }
 
         // criando um campo estado
-        public string? State { get; set; }
+        public string? Status { get; set; }
 
         // criando um campo codigo postal
-        public int ZipCode { get; set; }
+        public int CEP { get; set; }
 
     }
 }
