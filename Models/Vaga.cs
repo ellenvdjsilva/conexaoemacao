@@ -11,11 +11,11 @@ namespace conexaoemacao.Models
         // criação do campo Titulo
         [Required]
         [StringLength(50)]
-        public string? Title { get; set; }
+        public string? Titulo { get; set; }
 
         // criação campo sobre a vaga 
         [Required]
-        public string? About { get; set; }
+        public string? Sobre { get; set; }
 
         // puxando o campo endereço
         [Required]
@@ -23,16 +23,16 @@ namespace conexaoemacao.Models
 
         // criação do campo imagem 
         [Required]
-        public string? Image { get; set; }
+        public string? Imagem { get; set; }
 
         // criação do campo cargo/ocupação 
         [Required]
-        public string? Position { get; set; }
+        public string? Cargo { get; set; }
 
         // criação do campo quantidade vaga 
 
         [Required]
-        public int? Quantity { get; set; }
+        public int? Quantidade_vaga { get; set; }
 
 
 

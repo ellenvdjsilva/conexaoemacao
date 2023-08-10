@@ -9,12 +9,12 @@ namespace conexaoemacao.Models
         // criando um campo nome
         [Required]
         [StringLength(50)]
-        public string? Name { get; set; }
+        public string? Nome { get; set; }
 
         // criando campo idade 
         [Required]
         [MinLength(16)] // arrumar ainda 
-        public int Age { get; set; }
+        public int Idade { get; set; }
 
         // criando um campo CPF
         [Required]
@@ -27,7 +27,7 @@ namespace conexaoemacao.Models
         // criando campo telefone
         [Required]
         [StringLength(13)]
-        public int Phone { get; set; }
+        public int Telefone { get; set; }
 
         // criando campo e-mail
         [Required]
