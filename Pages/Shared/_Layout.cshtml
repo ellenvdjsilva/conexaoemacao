@@ -8,7 +8,7 @@
     <title>@ViewData["Title"] - conexaoemacao</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="~/assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="~/assets/logo.ico" />
     <!-- Custom Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,13 +26,13 @@
                 <!-- Navigation-->
                 <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
                     <div class="container px-5">
-                        <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Conexão em Ação</span></a>
+                <a class="navbar-brand" asp-page="Index"><span class="fw-bolder text-gradient d-inline">Conexão em Ação</span></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                                <li class="nav-item"><a class="nav-link" href="index.html">Sobre</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">Ong's</a></li>
-                                <li class="nav-item"><a class="nav-link" href="vagas.html">Vagas</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-page="Vagas">Vagas</a></li>
                                 <li class="nav-item"><a class="nav-link" href="entrar.html">Entrar</a></li>
                             </ul>
                         </div>
