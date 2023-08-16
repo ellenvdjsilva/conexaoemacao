@@ -5,6 +5,7 @@ namespace conexaoemacao.Models
 {
     public class Vaga
     {
+        public int Id { get; set; }
         [Required]
         public int OngId { get; set; }
 
