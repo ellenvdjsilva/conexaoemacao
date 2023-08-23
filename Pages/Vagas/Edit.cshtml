@@ -1,0 +1,60 @@
+﻿@page
+@model conexaoemacao.Pages.Vagas.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Vaga</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Vaga.Id" />
+            <div class="form-group">
+                <label asp-for="Vaga.OngId" class="control-label"></label>
+                <input asp-for="Vaga.OngId" class="form-control" />
+                <span asp-validation-for="Vaga.OngId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vaga.Titulo" class="control-label"></label>
+                <input asp-for="Vaga.Titulo" class="form-control" />
+                <span asp-validation-for="Vaga.Titulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vaga.Sobre" class="control-label"></label>
+                <input asp-for="Vaga.Sobre" class="form-control" />
+                <span asp-validation-for="Vaga.Sobre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vaga.Imagem" class="control-label"></label>
+                <input asp-for="Vaga.Imagem" class="form-control" />
+                <span asp-validation-for="Vaga.Imagem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vaga.Cargo" class="control-label"></label>
+                <input asp-for="Vaga.Cargo" class="form-control" />
+                <span asp-validation-for="Vaga.Cargo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vaga.Quantidade_vaga" class="control-label"></label>
+                <input asp-for="Vaga.Quantidade_vaga" class="form-control" />
+                <span asp-validation-for="Vaga.Quantidade_vaga" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
