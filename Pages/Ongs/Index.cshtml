@@ -1,8 +1,9 @@
 ﻿@page
-@model conexaoemacao.Pages.OngsModel
-@{
-}
+@model conexaoemacao.Pages.Ongs.IndexModel
 
+@{
+    ViewData["Title"] = "Index";
+}
 <section class="py-5">
     <div class="container px-5 my-5">
         <div class="row gx-5 justify-content-center">
@@ -25,7 +26,7 @@
                         </p>
                     </div>
                     <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-                           <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" target="_blank">Conheça mais</a></div>
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" target="_blank">Conheça mais</a></div>
                     </div>
                 </div>
             </div>
@@ -33,7 +34,7 @@
                 <div class="card h-100 shadow border-0">
                     <img class="card-img-top" src="~/assets/logovivenda.png" alt="...">
                     <div class="card-body p-4">
-                       <h5 class="card-title mb-3">Vivenda</h5></a>
+                        <h5 class="card-title mb-3">Vivenda</h5></a>
                         <p class="card-text mb-0">
                             Projetos:
                             Desde 1989, sempre com muito trabalho, a Vivenda chegou a faculdade, se formaram e se encontram hoje bem empregados. Com o tempo, a Associação cresceu, passou a ser reconhecida e já contava com uma equipe de confiança. Mas a irmã observou que ainda havia muito o se fazer: por que não estender o projeto para as famílias carentes da região de Parelheiros
@@ -60,3 +61,56 @@
         </div>
     </div>
 </section>
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ong[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ong[0].Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ong[0].Telefone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ong[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ong[0].Site)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Ong) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Site)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

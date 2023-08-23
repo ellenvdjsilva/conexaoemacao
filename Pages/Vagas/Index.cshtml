@@ -1,6 +1,8 @@
 ﻿@page
-@model conexaoemacao.Pages.VagasModel
+@model conexaoemacao.Pages.Vagas.IndexModel
+
 @{
+    ViewData["Title"] = "Index";
 }
 <!-- Section-->
 <section class="py-5">
@@ -23,12 +25,14 @@
                         <div class="text-center">
                             <!-- Product name-->
                             <h5 class="">Assistente de Eventos Solidários:</h5>
-                            <p>Descrição: Se você é apaixonado por organização e deseja contribuir para 
-                                causas sociais, essa vaga é para você. Como assistente de eventos solidários, 
-                                você ajudará na logística, planejamento e execução de eventos beneficentes, 
-                                promovendo o impacto positivo em nossa comunidade.</p>
-                                <p>Quntidades: 25</p>
-                        
+                            <p>
+                                Descrição: Se você é apaixonado por organização e deseja contribuir para
+                                causas sociais, essa vaga é para você. Como assistente de eventos solidários,
+                                você ajudará na logística, planejamento e execução de eventos beneficentes,
+                                promovendo o impacto positivo em nossa comunidade.
+                            </p>
+                            <p>Quntidades: 25</p>
+
                         </div>
                     </div>
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -45,7 +49,7 @@
                         <div class="text-center">
                             <h5 class="">Tutor de Apoio Escolar:</h5>
                             <p>
-                                Descrição: Como assistente de eventos 
+                                Descrição: Como assistente de eventos
                                 solidários, você ajudará na logística, planejamento e execução de eventos
                                 beneficentes, promovendo o impacto positivo em nossa comunidade.
                             </p>
@@ -67,7 +71,7 @@
                         <div class="text-center">
                             <h5 class="">Ajudante de Cozinha:</h5>
                             <p>
-                                Descrição: Como ajudante de cozinha, você colaborará com nossos chefs na preparação de ingredientes, 
+                                Descrição: Como ajudante de cozinha, você colaborará com nossos chefs na preparação de ingredientes,
                                 montagem de pratos e manutenção da higiene e organização da cozinha. Sua contribuição
                                 será essencial para garantir que as refeições sejam entregues com qualidade e amor.
                             </p>
@@ -90,8 +94,8 @@
                             <h5 class="">Distribuidor de Marmitas e Cestas: </h5>
                             <p>
                                 Descrição: Como distribuidor(a) de marmitas e cestas,
-                                você será responsável por garantir que as refeições preparadas cheguem com segurança e 
-                                pontualidade aos destinatários. Sua dedicação ajudará a fornecer alimento e esperança a indivíduos 
+                                você será responsável por garantir que as refeições preparadas cheguem com segurança e
+                                pontualidade aos destinatários. Sua dedicação ajudará a fornecer alimento e esperança a indivíduos
                                 e famílias que precisam.
                             </p>
                             <p>Quantidades: 20 </p>
@@ -145,7 +149,7 @@
             </div>
             <div class="col mb-5">
                 <div class="card h-100">
-                   
+
                     <img class="card-img-top" src="~/assets/vagaenquantoimg.png" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
@@ -186,5 +190,63 @@
         </div>
     </div>
 </section>
-        
 
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Vaga[0].OngId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vaga[0].Titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vaga[0].Sobre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vaga[0].Imagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vaga[0].Cargo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vaga[0].Quantidade_vaga)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Vaga) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OngId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sobre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Imagem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cargo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantidade_vaga)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

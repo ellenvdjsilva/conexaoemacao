@@ -34,6 +34,9 @@ namespace conexaoemacao.Models
         [Required]
         [StringLength(80)]
         public string? Site { get; set; }
+        public int? CEP { get; set; }
+        public int? CNPJ { get; set; }
+        public string? Segmento { get; set;}
     }
 
 }

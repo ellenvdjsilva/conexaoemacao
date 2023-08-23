@@ -1,3 +1,4 @@
+using Microsoft.Extensions.DependencyInjection;
 using conexaoemacao.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<ConexaoEmAcaoContext>(
-  options => options.UseNpgsql(builder.Configuration.GetConnectionString("BibliotecaContext"))
+  options => options.UseNpgsql(builder.Configuration.GetConnectionString("ConexaoEmAcaoContext") ?? throw new InvalidOperationException("Connection string 'ConexaoEmAcaoContex' not found."))
     );
 
 var app = builder.Build();
