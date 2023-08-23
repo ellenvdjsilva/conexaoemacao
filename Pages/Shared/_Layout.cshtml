@@ -26,13 +26,13 @@
                 <!-- Navigation-->
                 <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
                     <div class="container px-5">
-                <a class="navbar-brand" asp-page="Index"><span class="fw-bolder text-gradient d-inline">Conexão em Ação</span></a>
+                <a class="navbar-brand" asp-page="/Index"><span class="fw-bolder text-gradient d-inline">Conexão em Ação</span></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                                <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                                <li class="nav-item"><a class="nav-link" asp-page="Ongs">Ong's</a></li>
-                                <li class="nav-item"><a class="nav-link" asp-page="Vagas">Vagas</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/Index/#sobre">Sobre</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-page="Ongs/Index">Ong's</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-page="Vagas/Index">Vagas</a></li>
                                 <li class="nav-item"><a class="nav-link" asp-page="Entrar">Entrar</a></li>
                             </ul>
                         </div>
@@ -62,5 +62,6 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   
             <!-- Core theme JS-->
             <script src="~/js/scripts.js"></script>
+            @RenderSectionAsync("Scripts", false)
         </body>
 </html>
