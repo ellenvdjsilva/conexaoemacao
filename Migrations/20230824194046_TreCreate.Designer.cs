@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using conexaoemacao.Data;
@@ -11,9 +12,10 @@ using conexaoemacao.Data;
 namespace conexaoemacao.Migrations
 {
     [DbContext(typeof(ConexaoEmAcaoContext))]
-    partial class ConexaoEmAcaoContextModelSnapshot : ModelSnapshot
+    [Migration("20230824194046_TreCreate")]
+    partial class TreCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -125,10 +127,9 @@ namespace conexaoemacao.Migrations
                         .HasMaxLength(80)
                         .HasColumnType("character varying(80)");
 
-                    b.Property<string>("Telefone")
-                        .IsRequired()
+                    b.Property<int>("Telefone")
                         .HasMaxLength(13)
-                        .HasColumnType("character varying(13)");
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 

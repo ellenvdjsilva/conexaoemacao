@@ -23,7 +23,7 @@ namespace conexaoemacao.Models
         // criando campo telefone
         [Required]
         [StringLength(13)]
-        public int Telefone { get; set;}
+        public string? Telefone { get; set;}
 
         // criando campo e-mail
         [Required]
@@ -34,8 +34,9 @@ namespace conexaoemacao.Models
         [Required]
         [StringLength(80)]
         public string? Site { get; set; }
-        public int? CEP { get; set; }
         public int? CNPJ { get; set; }
+        [Required]
+
         public string? Segmento { get; set;}
     }
 

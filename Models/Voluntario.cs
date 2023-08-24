@@ -34,7 +34,7 @@ namespace conexaoemacao.Models
         [StringLength(80)]
         public string? Email { get; set; }
 
-        
+        public string? MensagemdeDescr { get; set; }
 
 
     }
