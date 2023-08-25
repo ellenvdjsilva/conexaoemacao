@@ -25,14 +25,12 @@
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="">Assistente de Eventos Solidários:</h5>
+                                <h5 class="">@Html.DisplayNameFor(model => model.Vaga[0].Titulo)</h5>
+                                <p>@Html.DisplayFor(modelItem => item.Cargo)</p>
                                 <p>
-                                    Descrição: Se você é apaixonado por organização e deseja contribuir para
-                                    causas sociais, essa vaga é para você. Como assistente de eventos solidários,
-                                    você ajudará na logística, planejamento e execução de eventos beneficentes,
-                                    promovendo o impacto positivo em nossa comunidade.
+                                    @Html.DisplayFor(modelItem => item.Sobre)
                                 </p>
-                                <p>Quntidades: 25</p>
+                                <p>@Html.DisplayNameFor(model => model.Vaga[0].Quantidade_vaga)</p>
 
                             </div>
                         </div>

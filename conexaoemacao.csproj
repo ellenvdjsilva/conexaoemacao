@@ -9,11 +9,15 @@
   <ItemGroup>
     <Compile Remove="Pages\Index1.cshtml.cs" />
     <Compile Remove="Pages\modelo.cshtml.cs" />
+    <Compile Remove="Pages\Ongs\Create.cshtml.cs" />
+    <Compile Remove="Pages\Vagas\Create.cshtml.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Remove="Pages\Index1.cshtml" />
     <Content Remove="Pages\Modelo.cshtml" />
+    <Content Remove="Pages\Ongs\Create.cshtml" />
+    <Content Remove="Pages\Vagas\Create.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

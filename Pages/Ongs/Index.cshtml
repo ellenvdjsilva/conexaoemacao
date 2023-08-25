@@ -5,7 +5,7 @@
     ViewData["Title"] = "Index";
 }
 <section class="py-5">
-    <div class="container px-5 my-5">
+     <div class="container px-5 my-5">
         <div class="row gx-5 justify-content-center">
             <div class="col-lg-8 col-xl-6">
                 <div class="text-center">
@@ -13,6 +13,26 @@
                     <p class="lead fw-normal text-muted mb-5">Olhe as Ongs que você mais identifica-se, venha ser voluntariooo</p>
                 </div>
             </div>
+        </div>
+        <div class="row gx-5">
+            @foreach (var item in Model.Ong) {
+            <div class="col-lg-4 mb-5">
+                <div class="card h-100 shadow border-0">
+                    <img class="card-img-top" src="~/assets/logo2enquanto.png" alt="...">
+                    <div class="card-body p-4">
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2"></div>
+                            <h5 class="card-title mb-3">@Html.DisplayFor(modelItem => item.Name)</h5>
+                        <p class="card-text mb-0">
+                          @Html.DisplayFor(modelItem => item.Descricao)
+                        </p>
+                    </div>
+                    <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" target="_blank">Conheça mais</a></div>
+                    </div>
+                </div>
+            </div>
+            }
+
         </div>
         <div class="row gx-5">
             <div class="col-lg-4 mb-5">
