@@ -10,11 +10,11 @@ using conexaoemacao.Models;
 
 namespace conexaoemacao.Pages.Voluntarios
 {
-    public class CreateModel : PageModel
+    public class CadastroVoluntarioModel : PageModel
     {
         private readonly conexaoemacao.Data.ConexaoEmAcaoContext _context;
 
-        public CreateModel(conexaoemacao.Data.ConexaoEmAcaoContext context)
+        public CadastroVoluntarioModel(conexaoemacao.Data.ConexaoEmAcaoContext context)
         {
             _context = context;
         }
