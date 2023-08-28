@@ -7,8 +7,7 @@ namespace conexaoemacao.Models
     public record Candidatura
     {   
         public int Id { get; set; }
-        [Required]
-        [StringLength(50)]
+       
         public string Mensagem { get; set; } = string.Empty;
         
         public string Status { get; set; } = string.Empty;

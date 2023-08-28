@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using conexaoemacao.Data;
@@ -11,9 +12,10 @@ using conexaoemacao.Data;
 namespace conexaoemacao.Migrations
 {
     [DbContext(typeof(ConexaoEmAcaoContext))]
-    partial class ConexaoEmAcaoContextModelSnapshot : ModelSnapshot
+    [Migration("20230828204322_corrigindoBanco")]
+    partial class corrigindoBanco
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -148,6 +150,9 @@ namespace conexaoemacao.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int>("EnderecoId")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Imagem")
                         .IsRequired()
                         .HasColumnType("text");
@@ -169,6 +174,8 @@ namespace conexaoemacao.Migrations
                         .HasColumnType("character varying(50)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EnderecoId");
 
                     b.ToTable("Vagas");
                 });
@@ -233,6 +240,17 @@ namespace conexaoemacao.Migrations
                 });
 
             modelBuilder.Entity("conexaoemacao.Models.Ong", b =>
+                {
+                    b.HasOne("conexaoemacao.Models.Endereco", "Endereco")
+                        .WithMany()
+                        .HasForeignKey("EnderecoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Endereco");
+                });
+
+            modelBuilder.Entity("conexaoemacao.Models.Vaga", b =>
                 {
                     b.HasOne("conexaoemacao.Models.Endereco", "Endereco")
                         .WithMany()

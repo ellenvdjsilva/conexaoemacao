@@ -18,10 +18,6 @@ namespace conexaoemacao.Models
         [Required]
         public string? Sobre { get; set; }
 
-        // puxando o campo endereço
-        [Required]
-        public Endereco? Endereco { get; set; }
-
         // criação do campo imagem 
         [Required]
         public string? Imagem { get; set; }
