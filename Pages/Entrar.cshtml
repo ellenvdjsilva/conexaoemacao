@@ -1,6 +1,7 @@
 ﻿@page
 @model conexaoemacao.Pages.EntrarModel
 @{
+    ViewData["Title"] = "Login";
 }
 
 <div class="container">
@@ -24,7 +25,7 @@
                             <button type="submit" class="btn btn-outline-dark mt-auto">Entrar</button>
                         </div>
                         <div class="mt-3">
-                            <a asp-page="CadastroVoluntario">Cadastre-se</a>
+                            <a asp-page="/Voluntarios/CadastroVoluntario">Cadastre-se</a>
                         </div>
                     </form>
                 </div>

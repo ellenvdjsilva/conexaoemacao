@@ -2,7 +2,7 @@
 @model conexaoemacao.Pages.Vagas.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Vagas";
 }
 <!-- Section-->
 <section class="py-5">
@@ -24,105 +24,133 @@
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <h5 class="">Titutlo da Vaga</h5>
-                            <p>Cargo</p>
+                            <h5 class="">Nome da Vaga: </h5>
                             <p>
-                                Sobre a vaga
+                                Descrição da vaga
                             </p>
-                            <p>12</p>
+                            <p>Quantidades: </p>
 
                         </div>
                     </div>
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" asp-page="CadastroVoluntario">Aplicar a vaga</a></div>
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" asp-page="/Entrar">Aplicar a vaga</a></div>
                     </div>
                 </div>
             </div>
-
-         @foreach (var item in Model.Vaga) {
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="~/assets/vagavivenda.png" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="">@Html.DisplayNameFor(model => model.Vaga[0].Titulo)</h5>
-                                <p>@Html.DisplayFor(modelItem => item.Cargo)</p>
-                                <p>
-                                    @Html.DisplayFor(modelItem => item.Sobre)
-                                </p>
-                                <p>@Html.DisplayNameFor(model => model.Vaga[0].Quantidade_vaga)</p>
-
-                            </div>
-                        </div>
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" asp-page="CadastroVoluntario">Aplicar a vaga</a></div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="~/assets/vagaenquantoimg.png" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5 class="">Nome da Vaga: </h5>
+                            <p>
+                                Descrição da vaga
+                            </p>
+                            <p>Quantidades: </p>
                         </div>
                     </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" asp-page="/Entrar">Aplicar a vaga</a></div>
+                    </div>
                 </div>
-        }
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="~/assets/vagaenquantoimg.png" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5 class="">Nome da Vaga: </h5>
+                            <p>
+                                Descrição da vaga
+                            </p>
+                            <p>Quantidades: </p>
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" asp-page="/Entrar">Aplicar a vaga</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="~/assets/vagavivenda.png" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5 class="">Nome da Vaga: </h5>
+                            <p>
+                                Descrição da vaga
+                            </p>
+                            <p>Quantidades: </p>
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" asp-page="/Entrar">Aplicar a vaga</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="~/assets/vagavivenda.png" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5 class="">Nome da Vaga: </h5>
+                            <p>
+                                Descrição da vaga
+                            </p>
+                            <p>Quantidades: </p>
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" asp-page="Entrar">Aplicar a vaga</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="~/assets/vagaenquantoimg.png" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5 class="">Nome da Vaga: </h5>
+                            <p>
+                                Descrição da vaga
+                            </p>
+                            <p>Quantidades: </p>
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" asp-page="/Entrar">Aplicar a vaga</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="~/assets/vagaenquantoimg.png" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5 class="">Nome da Vaga: </h5>
+                            <p>
+                                Descrição da vaga
+                            </p>
+                            <p>Quantidades: </p>
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" asp-page="/Entrar">Aplicar a vaga</a></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-
-<h1>Index</h1>
-
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Vaga[0].OngId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Vaga[0].Titulo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Vaga[0].Sobre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Vaga[0].Imagem)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Vaga[0].Cargo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Vaga[0].Quantidade_vaga)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Vaga) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.OngId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Titulo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sobre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Imagem)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cargo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Quantidade_vaga)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
