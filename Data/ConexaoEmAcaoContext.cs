@@ -4,11 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using conexaoemacao.Models;
-
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace conexaoemacao.Data
 {
-    public class ConexaoEmAcaoContext : DbContext
+    public class ConexaoEmAcaoContext : IdentityDbContext<AppUser>
     {
         public ConexaoEmAcaoContext(DbContextOptions<ConexaoEmAcaoContext> options): base(options){ }
         public DbSet<Vaga>? Vagas { get; set; }
